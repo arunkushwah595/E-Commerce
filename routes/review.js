@@ -1,5 +1,5 @@
 const express = require('express');
-const Product = require('../models/product');
+const Product = require('../models/Product');
 const Review = require('../models/Review');
 const router = express.Router(); // mini instance
 const { validateReview } = require('../middleware');
