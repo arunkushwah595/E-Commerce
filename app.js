@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -19,7 +20,7 @@ const authRoutes = require('./routes/auth');
 
 
 //return promise
-mongoose.connect('mongodb://127.0.0.1:27017/shopping-e-commerce')
+mongoose.connect(process.env.Mongo_URI)
     .then(() => {
         console.log("DB Connected Successfully");
 
